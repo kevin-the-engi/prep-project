@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-const App = () => {  
+const App = () => { 
+  const [prompts, setPrompts] = useState([]);
+  
   return (
     <div>Hello World</div>
   );
