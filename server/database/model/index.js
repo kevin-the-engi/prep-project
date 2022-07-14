@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const interviewSchema = new Schema({
-    id: String,
+    id: Number,
 	prompt: String,
     response: String,
     type: String,
