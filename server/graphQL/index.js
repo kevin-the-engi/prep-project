@@ -1,4 +1,5 @@
 const { buildSchema } = require('graphql');
+const data = require('../../dummy.js');
 
 const schema = buildSchema (`
     type Query {
@@ -14,4 +15,15 @@ const schema = buildSchema (`
     }
 `);
 
-module.exports = schema;
+const getQuestions = (args) => {
+    return data;
+}
+
+const root = {
+    questions: getQuestions
+}
+
+module.exports = {
+    schema,
+    root
+}
